@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7523704097550345844}
   - component: {fileID: 3353008341743860372}
   - component: {fileID: 880711125064206603}
-  - component: {fileID: -3637710879031514451}
   m_Layer: 0
   m_Name: image 3
   m_TagString: Untagged
@@ -167,17 +166,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3637710879031514451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323330911069717492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e0b69ce152bf734785cf20c74195e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadZone: -15
-  moveSpeed: 3
