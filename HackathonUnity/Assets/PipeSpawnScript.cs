@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PipeSpawnScript : MonoBehaviour
 {
+    public GameObject[] objects;
     public GameObject pipe;
     public float spawnRate = 2;
     private float timer = 0;
