@@ -380,7 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1980408047}
   nameObject: {fileID: 532817285}
-  RoomCodeTest: {fileID: 532817286}
+  roomCodeText: {fileID: 532817286}
 --- !u!4 &669816256
 Transform:
   m_ObjectHideFlags: 0
