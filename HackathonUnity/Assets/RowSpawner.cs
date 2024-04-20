@@ -5,14 +5,13 @@ using UnityEngine;
 public class RowSpawner : MonoBehaviour
 {
     public GameObject[] objects;
-
     public float spawnRate = 4;
     private float timer = 0;
     public float heightOffset = 10;
     // Start is called before the first frame update
     void Start()
     {
-        spawnPipe();
+        spawnRow();
     }
 
     // Update is called once per frame
@@ -24,12 +23,12 @@ public class RowSpawner : MonoBehaviour
         }
         else
         {
-            spawnPipe();
+            spawnRow();
             timer = 0;
         }
     }
 
-    void spawnPipe()
+    void spawnRow()
     {
         int row = Random.Range(0, objects.Length - 1);
 

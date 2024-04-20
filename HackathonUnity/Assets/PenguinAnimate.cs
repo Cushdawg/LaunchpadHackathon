@@ -7,7 +7,6 @@ public class PenguinAnimate : MonoBehaviour
     public Animator animator;
     int idle = 0;
     int slide = 1;
-    int jump = 2;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     // Start is called before the first frame update
@@ -19,23 +18,23 @@ public class PenguinAnimate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow) && IsGrounded()) 
+    }
+
+    public void Slide()
+    {
+        if (IsGrounded())
         {
             animator.SetInteger("state", slide);
-        } 
-        
-        else if (Input.GetKey(KeyCode.LeftArrow) && IsGrounded()) 
-        {
-            animator.SetInteger("state", slide);
-        } 
-        else if (Input.GetKey(KeyCode.Space)) 
-        {
-            animator.SetInteger("state", idle);
-        } 
-        else if (IsGrounded())
-        {
-            animator.SetInteger("state", idle);
         }
+        else
+        {
+            Idle();
+        }
+    }
+
+    public void Idle()
+    {
+        animator.SetInteger("state", idle);
     }
 
     private bool IsGrounded()
