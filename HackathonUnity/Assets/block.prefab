@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadZone: -15
-  moveSpeed: 0
+  moveSpeed: 3

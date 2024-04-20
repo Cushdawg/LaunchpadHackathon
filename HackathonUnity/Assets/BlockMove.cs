@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlockMove : MonoBehaviour
 {
     public float deadZone = -15;
-    public float moveSpeed = 3;
+    public float moveSpeed = 1;
     // Start is called before the first frame update
     void Start()
     {
