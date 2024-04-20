@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: a43c88f464f21114c888d93870b60d01
+  productGUID: 7afe90ad8cdefbc4b83e68c2e0440c8a
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: HackathonUnity
+  productName: Flappy Bird
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -629,14 +629,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: HackathonUnity
+  metroPackageName: Flappy Bird
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: HackathonUnity
+  metroApplicationDescription: Flappy Bird
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -705,11 +705,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8a42c3ba-7f3c-4ac4-9ab5-48ff440f762c
+  cloudProjectId: 3357e687-d3b8-4c47-bfe4-dec36f263cdc
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: HackathonUnity
-  organizationId: cushdawg
+  projectName: Flappy Bird
+  organizationId: tannerhelmsllc
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
