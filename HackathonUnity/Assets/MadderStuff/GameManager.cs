@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+
     public GameObject canvas;
     public GameObject nameObject;
     private PlayerJoin[] playerJoins;
+    public TextMeshProUGUI RoomCodeText;
 
     // Madder functions that you may call
     // These functions should be conditionally called based on if this is inside a WebGL build, not the editor
@@ -27,18 +30,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // Testing Madder functions
-        // TODO: This code should be commented out or removed before submission
-
-        // Test RoomCode
-        // TODO: Any of the following code may be modified or deleted
+        /*
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             RoomCode("ABCD");
         }
 
-        // Test PlayerJoined
-        // TODO: Any of the following code may be modified or deleted
+
         if (Input.GetKeyDown(KeyCode.J))
         {
             PlayerJoin playerJoin = new PlayerJoin();
@@ -48,8 +47,7 @@ public class GameManager : MonoBehaviour
             PlayerJoined(jsonPlayerJoin);
         }
 
-        // Test PlayerLeft
-        // TODO: Any of the following code may be modified or deleted
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             if (playerJoins.Length == 0)
@@ -59,8 +57,6 @@ public class GameManager : MonoBehaviour
             PlayerLeft("Player 0");
         }
 
-        // Test PlayerControllerState for Player 0
-        // TODO: Any of the following code may be modified or deleted
         if (playerJoins.Length > 0)
         {
             Joystick joystick = new Joystick(0, 0);
@@ -105,6 +101,7 @@ public class GameManager : MonoBehaviour
         {
             HandleExit();
         }
+        */
     }
 
     // TODO: The following function may be modified or deleted
@@ -129,6 +126,7 @@ public class GameManager : MonoBehaviour
     {
         // TODO: Any of the following code may be modified or deleted
         Debug.Log("Room Code: " + roomCode);
+        RoomCodeText.text = roomCode;
     }
 
     /*
