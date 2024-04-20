@@ -1,25 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Runtime.InteropServices;
 
 public class NameScript : MonoBehaviour
 {
     public Text nameText;
-    public float speed = 5f; // Speed of the movement
-    private Vector2 targetPosition; // The target position to move towards
-    private float xMax; // Max horizontal position on the screen
-    private float yMax; // Max vertical position on the screen
+    private float x;
+    private float y;
+    private float xMax = Screen.width / 2 - 50f;
+    private float yMax = Screen.height / 2 - 15f;
+    public float speed = 0.0005f;
 
+    // Start is called before the first frame update
     void Start()
     {
-        targetPosition = transform.position; // Initialize target position
-        xMax = Screen.width / 2; // Replace with actual Canvas size if different
-        yMax = Screen.height / 2; // Replace with actual Canvas size if different
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-        // Lerp towards the target position each frame
-        transform.position = Vector2.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+        if (x != 0 || y != 0)
+        {
+            Vector3 pos = Camera.main.WorldToScreenPoint(new Vector3(x, y, 0));
+            transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
+        }
     }
 
     public void SetName(string name)
@@ -34,7 +42,7 @@ public class NameScript : MonoBehaviour
 
     public void UpdateXY(float x, float y)
     {
-        // Update the target position with the new x and y values
-        targetPosition += new Vector2(x, y); // Adjust the target by the input values
+        this.x = x;
+        this.y = y;
     }
 }

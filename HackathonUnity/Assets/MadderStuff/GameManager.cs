@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
         // Create player name on canvas
         GameObject name = Instantiate(nameObject, canvas.transform);
         //name.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
-        //name.GetComponent<NameScript>().SetName(playerJoin.name);
+        name.GetComponent<PlayerMovement>().SetName(playerJoin.name);
 
         // Add player to playerJoins array
         PlayerJoin[] newPlayerJoins = new PlayerJoin[playerJoins.Length + 1];
@@ -235,22 +235,23 @@ public class GameManager : MonoBehaviour
         // Move player based on joystick
         foreach (Transform child in canvas.transform)
         {
-            //if (child.GetComponent<PlayerMovement>().GetName() == controllerState.name)
-            //{
-                child.GetComponent<PlayerMovement>().UpdateX(controllerState.joystick.x);
-                if (controllerState.triangle)
-                {
-                    child.GetComponent<PlayerMovement>().Jump();
-                }
+            if (child.GetComponent<PlayerMovement>().GetName() == controllerState.name)
+            {
+            child.GetComponent<PlayerMovement>().UpdateX(controllerState.joystick.x);
+            if (controllerState.triangle)
+            {
+                child.GetComponent<PlayerMovement>().Jump();
+            }
             PenguinAnimate script = child.GetComponent<PenguinAnimate>();
             if (controllerState.joystick.x != 0)
             {
                 script.Slide();
-            } else
+            }
+            else
             {
                 script.Idle();
             }
-            //}
+            }
         }
     }
 

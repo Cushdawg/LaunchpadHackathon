@@ -11,6 +11,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    private void Start()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        sprite.color = Random.ColorHSV(0f, 1f, 0.5f, 1f, 0.5f, 1f);
+    }
+
     void Update()
     {
         
@@ -19,7 +25,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void UpdateX(float x)
     {
-        Debug.Log(x);
+        if (x > 0)
+        {
+            isFacingRight = true;
+        } else
+        {
+            isFacingRight = false;
+        }
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2 (x / 10, rb.velocity.y);
         Flip();
