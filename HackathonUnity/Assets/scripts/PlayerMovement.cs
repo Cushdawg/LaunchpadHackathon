@@ -25,14 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void UpdateX(float x)
     {
-        if (x > 0)
-        {
-            isFacingRight = true;
-        } else
-        {
-            isFacingRight = false;
-        }
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = x;
         rb.velocity = new Vector2 (x / 10, rb.velocity.y);
         Flip();
     }
@@ -67,8 +60,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
+        Debug.Log(isFacingRight);
+        Debug.Log(horizontal);
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+ 
         {
+            Debug.Log("flip");
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
